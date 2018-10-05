@@ -11,6 +11,25 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+// Dashboard
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+// Admin
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+// Masterlist
+Route::get('/master', 'MasterlistController@index')->name('master');
+
+// Incoming
+Route::get('/incoming', 'IncomingController@index')->name('incoming');
+
+// Outgoing
+Route::get('/outgoing', 'OutgoingController@index')->name('outgoing');
