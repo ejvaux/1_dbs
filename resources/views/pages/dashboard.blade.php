@@ -9,20 +9,14 @@
             <div class="card">
                 {{-- <div class="card-header">Dashboard</div> --}}
                 <div class="card-body">
-                    <div id="danplalocationdiv2"></div>                                    
-                    {!! \Lava::render('PieChart', 'Locations2', 'danplalocationdiv2') !!}                    
+                    <div id="danplalocationdiv2"></div>                  
                 </div>
             </div>
         </div>
         <div class="col-md-6 pl-1">
             <div class="card">
                 <div class="card-body">
-                    <div id="danplalocationdiv"></div>                                    
-                    {!! \Lava::render('ColumnChart', 'Locations', 'danplalocationdiv') !!}   
-                    {{-- <div id="danplalocationdiv1"></div>                                    
-                    {!! \Lava::render('BarChart', 'Locations1', 'danplalocationdiv1') !!} --}}
-                    {{-- <div id="danplalocationdiv3"></div>                                    
-                    {!! \Lava::render('LineChart', 'Locations3', 'danplalocationdiv3') !!} --}}
+                    <div id="danplalocationdiv"></div>                      
                 </div>
             </div>
         </div>
@@ -38,4 +32,12 @@
         </div>        
     </div>  
 </div>
+@endsection
+@section('graphs')
+    {!! \Lava::render('PieChart', 'Locations2', 'danplalocationdiv2') !!}
+    {!! \Lava::render('ColumnChart', 'Locations', 'danplalocationdiv') !!}
+    {{-- <div id="danplalocationdiv1"></div>                                    
+    {!! \Lava::render('BarChart', 'Locations1', 'danplalocationdiv1') !!} --}}
+    {{-- <div id="danplalocationdiv3"></div>                                    
+    {!! \Lava::render('LineChart', 'Locations3', 'danplalocationdiv3') !!} --}}
 @endsection

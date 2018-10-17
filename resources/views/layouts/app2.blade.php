@@ -34,5 +34,6 @@
             </div>
         </div>            
     </div>
+    @yield('graphs')
 </body>
 </html>
