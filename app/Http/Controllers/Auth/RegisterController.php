@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Session;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/adduser';
 
     /**
      * Create a new controller instance.
@@ -37,7 +38,13 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        /* $this->middleware('guest'); */
+    }
+
+    protected function redirectTo()
+    {
+        Session::flash('success', "New User Successfully Added.");
+        return '/adduser';
     }
 
     /**

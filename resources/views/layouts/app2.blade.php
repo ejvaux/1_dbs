@@ -14,9 +14,9 @@
     @include('inc.header')
     
 </head>
-<body>
+<body style='overflow:hidden;'>
     <div id="app">
-        <div class='container-fluid'>
+        <div class='container-fluid' >
             <div class='row'>
                 <div class='col-md-2 m-0 p-0 background'>
                     <div id='sdbr container' class='sidebr'>

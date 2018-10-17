@@ -15,4 +15,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function changepw()
+    {
+        return view('auth.passwords.change');
+    }
 }

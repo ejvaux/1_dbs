@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('pageTitle','Email | DMS - Primatech')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

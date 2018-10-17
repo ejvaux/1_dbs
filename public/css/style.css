@@ -1,32 +1,84 @@
-.sidebar-wrapper{
+.sidebar-wrapper
+{
     /* background-color:rgb(7, 7, 7); */
     /* background:   url("/1_dms/public/images/home_parallax2.jpg"); */    
     height:100vh;
-    background: linear-gradient(rgba(26, 82, 118,.8), rgba(72, 201, 176,.8)), url("/1_dms/public/images/home_parallax2.jpg");
+    background: linear-gradient(rgba(21, 67, 96,.8),rgba(26, 82, 118,.8), rgba(72, 201, 176,.8)), url("/1_dms/public/images/home_parallax2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color: #fff;
     font-family:    'Roboto';
-    /* height: 450px; */
-    /* padding-top: 50px; */
+    /* position: absolute; */
 }
-.logo-img {
+.logo-img 
+{
     border-bottom: 1px solid Ghostwhite;
 }
-.sblink {
+.sblink 
+{
     color: Ghostwhite;
     font-weight: bold;
 }
-.sblink:hover {
-    background-color: rgba(100, 94, 94, 0.8);
+.sblink:hover 
+{
+    background-color: rgba(229, 232, 232, 0.2);
     font-weight: bold;
     color: Ghostwhite;
     border-radius: 5px;
 }
-.sbicon{
+.sbicon
+{
     font-size: 1.6rem;
 }
-.navbar-text, .nbicon{
+.navbar-text, .nbicon
+{
     font-size: 1rem;
+}
+.flatb_admin 
+{
+    color: #fff;
+    background: linear-gradient(rgba(31, 97, 141,.8),rgba(36, 113, 163,.8));
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+    padding-top: 3rem;
+    padding-right: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    margin: .3rem;
+}
+.flatb_admin:hover
+{
+    background: linear-gradient(rgba(31, 97, 141),rgba(36, 113, 163));    
+    /* color: rgba(36, 113, 163,.7); */
+    opacity: 1;
+    transition: 0.8s;
+}
+.flatb_admin_icon
+{
+    font-size: 6rem;
+}
+.flatb_admin_label
+{
+    font-size: 1rem;
+    text-align: left;
+}
+.tble
+{
+    height: 70vh;
+    overflow-y: auto;
+}
+.tble2
+{
+    height: 65vh;
+    overflow-y: auto;
+}
+.dashb
+{
+    height: 90vh;
+    overflow-y: auto;
+}
+.highlight{
+    background: linear-gradient(#5DADE2, #2E86C1);
+    color:  white;
 }

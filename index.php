@@ -1,3 +1,3 @@
 <?php
-header('Location: /1_dms/public/');
+header('Location: /1_dms/public/dashboard');
 ?>
