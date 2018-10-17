@@ -11,8 +11,8 @@
         </div>
         <div class='col-md-3 pl-0 ml-0'>
             <div class="input-group">                    
-                <input type="text" class="form-control" id="searchtextbox" placeholder="Search user . . .">
-                <button type="button" class='btn btn-primary rounded-0' value="" id="search"><i class="fa fa-search"></i></button>
+                <input value='{{ (empty($stxt)?'':$stxt) }}' type="text" class="form-control" id="searchtextbox" placeholder="Search user . . .">
+                <button type="button" class='btn btn-primary rounded-0' data-url='{{ url('/userslist') }}' id="search"><i class="fa fa-search"></i></button>
             </div>
         </div>
     </div>

@@ -10,6 +10,7 @@ use App\Location;
 use App\TransactionType;
 use App\Transaction;
 use App\ScrapDanpla;
+use App\User;
 
 class SearchController extends Controller
 {
@@ -56,5 +57,16 @@ class SearchController extends Controller
                         ->paginate('500');
         $stxt = $txt;
         return view('pages.masterlist.scraptable',compact('scraps','stxt'));
+    }
+    public function searchuser($txt)
+    {
+        $users = User::select('users.*')
+                ->where(function ($query) use($txt) {
+                    $query->where('users.name','like','%'.$txt.'%');
+                })                        
+                ->orderBy('id','DESC')
+                ->paginate('10');
+        $stxt = $txt;
+        return view('pages.admin.userslist',compact('users','stxt'));
     }
 }

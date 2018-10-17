@@ -72,6 +72,7 @@ Route::get('/templist2', 'ScanController@templist2')->name('templist2');
 Route::get('/master/danpla/{txt}', 'SearchController@searchdanpla')->name('searchdanpla');
 Route::get('/master/transaction/{txt}', 'SearchController@searchtransaction')->name('searchtransaction');
 Route::get('/master/scrap/{txt}', 'SearchController@searchscrap')->name('searchscrap');
+Route::get('/userslist/{txt}', 'SearchController@searchuser')->name('searchuser')->middleware('auth','admin');
 
 // Test
 Route::get('/test', function(){
