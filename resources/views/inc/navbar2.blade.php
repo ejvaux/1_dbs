@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand navbar-light navbar-laravel">
     <div class="container">
         {{-- <a class="navbar-brand" href="/1_mes/">
             <img src="{{ asset('images/primatech-logo.png') }}" style="width: 146px; height: 28px">
-        </a> --}}
+        </a> --}}        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>

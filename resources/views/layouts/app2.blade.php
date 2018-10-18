@@ -16,14 +16,14 @@
 </head>
 <body style='overflow:hidden;'>
     <div id="app">
-        <div class='container-fluid' >
+        <div class='container-fluid' >            
             <div class='row'>
-                <div class='col-md-2 m-0 p-0 background'>
-                    <div id='sdbr container' class='sidebr'>
+                <div class='col-md-2 m-0 p-0 background'>                        
+                    <div id='sdbr' class='sidebr'>
                         @include('inc.sidebar')
-                    </div>                    
+                    </div>                   
                 </div>
-                <div class='col-md-10 m-0 p-0'>
+                <div class='col-md-10 m-0 p-0'>                                               
                     <div id='nvbr'>
                         @include('inc.navbar2')
                     </div>        
@@ -32,7 +32,7 @@
                     </main>                     
                 </div>
             </div>
-        </div>            
+        </div>
     </div>
     @yield('graphs')
 </body>
