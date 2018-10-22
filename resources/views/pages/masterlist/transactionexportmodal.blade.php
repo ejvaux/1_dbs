@@ -82,7 +82,7 @@
           
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" name="submit" id="euserauthsubmit"><i class="far fa-file-excel"></i> Export</button>
+          <button type="submit" class="btn btn-primary" name="submit" id="euserauthsubmit"><i class="fas fa-download"></i> Download</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
         </div>
         </form>
