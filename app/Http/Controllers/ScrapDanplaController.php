@@ -7,6 +7,8 @@ use App\Danpla;
 use App\ScrapDanpla;
 use App\ScrapTemp;
 use Auth;
+use App\Exports\ScrapExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ScrapDanplaController extends Controller
 {
@@ -123,5 +125,16 @@ class ScrapDanplaController extends Controller
             return redirect()->back()->with('error','No scanned danpla.');
         }
 
+    }
+    public function export(Request $request) 
+    {
+        return /* Excel::download(new DanplaExport, 'Danpla Master List.xlsx'); */
+            (new ScrapExport(
+                $request->input('barcode'),
+                $request->input('code'),
+                $request->input('type_id'),
+                $request->input('location_id'),
+                $request->input('status_id')
+                ))->download('Scrap Danpla List.xlsx');
     }
 }

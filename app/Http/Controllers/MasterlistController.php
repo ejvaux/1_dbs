@@ -11,6 +11,7 @@ use App\Transaction;
 use App\TransactionType;
 use App\ScrapDanpla;
 use App\Location;
+use App\User;
 
 class MasterlistController extends Controller
 {
@@ -47,12 +48,16 @@ class MasterlistController extends Controller
         $transactions = Transaction::sortable()->orderBy('id')->paginate('500');
         $t_types = TransactionType::get();
         $locations = Location::orderBy('CUSTOMER_NAME')->get();
-        return view('pages.masterlist.transactiontable',compact('transactions','t_types','locations'));
+        $pics = User::get();
+        return view('pages.masterlist.transactiontable',compact('transactions','t_types','locations','pics'));
     }
     public function scrap()
     {
         $scraps = ScrapDanpla::sortable()->orderBy('id')->paginate('500');
-        return view('pages.masterlist.scraptable',compact('scraps'));
+        $d_types = DanplaType::get();
+        $locations = Location::orderBy('CUSTOMER_NAME')->get();
+        $d_statuses = DanplaStatus::get();
+        return view('pages.masterlist.scraptable',compact('scraps','d_types','locations','d_statuses'));
     }
     public function transactiondanpla($id)
     {

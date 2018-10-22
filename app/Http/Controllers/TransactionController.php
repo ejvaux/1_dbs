@@ -10,6 +10,8 @@ use App\Transaction;
 use App\TransactionType;
 use App\DanplaList;
 use App\Danpla;
+use App\Exports\TransactionExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TransactionController extends Controller
 {
@@ -147,5 +149,15 @@ class TransactionController extends Controller
         {
             return redirect()->back()->with('error','No Scanned Danpla');
         }
+    }
+    public function export(Request $request) 
+    {
+        return /* Excel::download(new DanplaExport, 'Danpla Master List.xlsx'); */
+            (new TransactionExport(
+                $request->input('xnumber'),
+                $request->input('xpic_id'),
+                $request->input('xtype_id'),
+                $request->input('xlocation_id')
+                ))->download('Transaction Master List.xlsx');
     }
 }

@@ -8,6 +8,8 @@ use App\DanplaType;
 use App\DanplaStatus;
 use App\Location;
 use App\Custom\AppFunctions;
+use App\Exports\DanplaExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DanplaController extends Controller
 {
@@ -107,5 +109,16 @@ class DanplaController extends Controller
     {
         Danpla::where('id',$id)->delete();
         return redirect()->back()->with('success','Danpla successfully deleted.');
+    }
+    public function exportall(Request $request) 
+    {
+        return /* Excel::download(new DanplaExport, 'Danpla Master List.xlsx'); */
+            (new DanplaExport(
+                $request->input('barcode'),
+                $request->input('code'),
+                $request->input('type_id'),
+                $request->input('location_id'),
+                $request->input('status_id')
+                ))->download('Danpla Master List.xlsx');
     }
 }

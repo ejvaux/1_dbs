@@ -41,7 +41,6 @@
           
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" name="submit" id="euserauthsubmit"><i class="far fa-save"></i> Save</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
         </div>
         </form>
