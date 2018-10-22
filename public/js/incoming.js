@@ -241,7 +241,7 @@ $(document).on('click', '#scrap_submit_button', function(e) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, Submit it!'
+        confirmButtonText: 'Yes, Scrap it!'
         }).then((result) => {
         if (result.value) {
             $('#scrap_submit_button').prop('disabled', true);

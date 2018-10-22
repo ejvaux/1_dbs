@@ -10,12 +10,14 @@
             @if (Auth::user()->admin == 1)
                 <button id='transactEditBtn' class='btn btn-primary danplalist_btn' disabled><i class="fas fa-edit"></i> EDIT</button>
                 <button id='transactViewBtn' class='btn btn-primary danplalist_btn' disabled><i class="far fa-eye"></i> VIEW DANPLA</button>
-            @endif            
+            @endif
+            <button id='texport_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>           
         </div>
         <div class='col-md-4 ml-auto'>
             <div class="input-group">                    
                 <input value='{{ (empty($stxt)?'':$stxt) }}' type="text" class="form-control" id="searchtextbox" placeholder="Search transaction # . . .">
                 <button type="button" class='btn btn-primary rounded-0' data-url='{{ url('/master/transaction') }}' id="search"><i class="fa fa-search"></i></button>
+                
             </div>
         </div>
     </div>
@@ -28,4 +30,5 @@
 <div id='danplamodal'>
     @include('pages.masterlist.transactionmodal')
 </div>
+@include('pages.masterlist.transactionexportmodal')
 @endsection

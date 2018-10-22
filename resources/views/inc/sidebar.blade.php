@@ -17,7 +17,7 @@
                 </li>
             @endif            
             <li class="nav-item my-2">
-                <a class="nav-link sblink" href="{{ route('master') }}"><i class="fas fa-database mr-3 sbicon"></i>MASTERLIST</a>
+                <a class="nav-link sblink" href="{{ route('master') }}"><i class="fas fa-database mr-3 sbicon"></i>MASTER LIST</a>
             </li>
             <li class="nav-item my-2">
                 <a class="nav-link sblink" href="{{ route('scan') }}"><i class="fas fa-barcode mr-3 sbicon"></i>SCAN</a>

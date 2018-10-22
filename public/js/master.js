@@ -115,3 +115,36 @@ $('#app').on("keyup",'#searchtextbox',function(e) {
         $('#search').trigger('click');
     }
 });
+
+/* ------------------- Show Export Modal Danpla------------------- */
+$('#app').on("click",'#export_btn',function(e) {
+    $('#danplaexportmod').modal('show');
+});
+
+/* ------------------- Close Export Modal Danpla ------------------- */
+$('#app').on("submit",'#danplaexportform',function(e) {
+    $('#danplaexportmod').modal('hide');
+    /* $(this).trigger("reset"); */
+});
+
+/* ------------------- Show Export Modal Transactions------------------- */
+$('#app').on("click",'#texport_btn',function(e) {
+    $('#transactionexportmod').modal('show');
+});
+
+/* ------------------- Close Export Modal Transactions ------------------- */
+$('#app').on("submit",'#transactionexportform',function(e) {
+    $('#transactionexportmod').modal('hide');
+    /* $(this).trigger("reset"); */
+});
+
+/* ------------------- Show Export Modal Scrap Danpla ------------------- */
+$('#app').on("click",'#sdexport_btn',function(e) {
+    $('#scrapdanplaexportmod').modal('show');
+});
+
+/* ------------------- Close Export Modal Scrap Danpla ------------------- */
+$('#app').on("submit",'#scrapdanplaexportform',function(e) {
+    $('#scrapdanplaexportmod').modal('hide');
+    /* $(this).trigger("reset"); */
+})
