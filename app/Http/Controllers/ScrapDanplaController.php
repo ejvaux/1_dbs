@@ -135,6 +135,6 @@ class ScrapDanplaController extends Controller
                 $request->input('type_id'),
                 $request->input('location_id'),
                 $request->input('status_id')
-                ))->download('Scrap Danpla List.xlsx');
+                ))->download('Scrap Danpla List '.Date('Y-m-d').'.xlsx');
     }
 }

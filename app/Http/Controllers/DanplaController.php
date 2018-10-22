@@ -119,6 +119,6 @@ class DanplaController extends Controller
                 $request->input('type_id'),
                 $request->input('location_id'),
                 $request->input('status_id')
-                ))->download('Danpla Master List.xlsx');
+                ))->download('Danpla Master List '.Date('Y-m-d').'.xlsx');
     }
 }

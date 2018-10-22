@@ -158,6 +158,6 @@ class TransactionController extends Controller
                 $request->input('xpic_id'),
                 $request->input('xtype_id'),
                 $request->input('xlocation_id')
-                ))->download('Transaction Master List.xlsx');
+                ))->download('Transaction Master List '.Date('Y-m-d').'.xlsx');
     }
 }
