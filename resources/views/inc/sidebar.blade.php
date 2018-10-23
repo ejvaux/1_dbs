@@ -30,8 +30,8 @@
                 <footer class="page-footer font-small blue">
                     <!-- Copyright -->
                     <div class="footer-copyright text-center py-3">© 2018 Prima Tech Phils., Inc.
-                        <br>Designed and built by
-                        <br>Edmund O. Mati Jr.
+                        {{-- <br>Designed and built by
+                        <br>Edmund O. Mati Jr. --}}
                     </div>
                     <!-- Copyright -->
                 </footer>
