@@ -23,7 +23,7 @@
                         @include('inc.sidebar')
                     </div>                   
                 </div>
-                <div class='col-md-10 m-0 p-0'>                                               
+                <div id='rpanel' class='col-md-10 m-0 p-0'>                                               
                     <div id='nvbr'>
                         @include('inc.navbar2')
                     </div>        

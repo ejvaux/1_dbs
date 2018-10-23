@@ -82,3 +82,15 @@
     background: linear-gradient(#5DADE2, #2E86C1);
     color:  white;
 }
+
+@media only screen and (max-width: 768px) {
+    #sdbr {
+        display: none;
+    }
+    #rpanel {
+        width: 100vw;
+    }    
+    .hidewhensmall{
+        display: none;
+    }
+}

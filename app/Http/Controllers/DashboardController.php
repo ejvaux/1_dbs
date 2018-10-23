@@ -106,14 +106,45 @@ class DashboardController extends Controller
 
         // Summary Table
         $data5 = DB::select('SELECT masterdatabase.dmc_customer.CUSTOMER_NAME as location, count(dmsdatabase.danplas.`location_id`) as total FROM dmsdatabase.`danplas` INNER JOIN masterdatabase.dmc_customer ON dmsdatabase.danplas.`location_id`= masterdatabase.dmc_customer.CUSTOMER_ID WHERE dmsdatabase.danplas.`location_id` IS NOT null GROUP BY dmsdatabase.danplas.`location_id` ORDER BY location');
-        
+        $summary_total = count(Danpla::where('location_id','!=',null)->get());
+
+        // Danpla Status
+        $d_status1 = DB::select('SELECT COUNT(*) as total, `danpla_types`.`name` as location FROM `danplas` INNER JOIN `danpla_types` ON `danplas`.`type_id` = `danpla_types`.`id` WHERE `status_id` = 1 GROUP BY `type_id`');
+        $d_status1_total = COUNT(Danpla::where('status_id',1)->get());
+        $d_status2 = DB::select('SELECT COUNT(*) as total, `danpla_types`.`name` as location FROM `danplas` INNER JOIN `danpla_types` ON `danplas`.`type_id` = `danpla_types`.`id` WHERE `status_id` = 2 GROUP BY `type_id`');
+        $d_status2_total = COUNT(Danpla::where('status_id',2)->get());
+
         // Danpla Sizes
         $d_type = DanplaType::get();
+
         $d_type1 = DB::select('SELECT masterdatabase.dmc_customer.CUSTOMER_NAME as location, count(dmsdatabase.danplas.`location_id`) as total FROM dmsdatabase.`danplas` INNER JOIN masterdatabase.dmc_customer ON dmsdatabase.danplas.`location_id`= masterdatabase.dmc_customer.CUSTOMER_ID WHERE dmsdatabase.danplas.`location_id` IS NOT null  AND dmsdatabase.danplas.`type_id` = 1 GROUP BY dmsdatabase.danplas.`location_id` ORDER BY location');
+        $type1_total = count(Danpla::where('type_id',1)->where('location_id','!=',null)->get());
+
         $d_type2 = DB::select('SELECT masterdatabase.dmc_customer.CUSTOMER_NAME as location, count(dmsdatabase.danplas.`location_id`) as total FROM dmsdatabase.`danplas` INNER JOIN masterdatabase.dmc_customer ON dmsdatabase.danplas.`location_id`= masterdatabase.dmc_customer.CUSTOMER_ID WHERE dmsdatabase.danplas.`location_id` IS NOT null  AND dmsdatabase.danplas.`type_id` = 2 GROUP BY dmsdatabase.danplas.`location_id` ORDER BY location');
+        $type2_total = count(Danpla::where('type_id',2)->where('location_id','!=',null)->get());
+
         $d_type3 = DB::select('SELECT masterdatabase.dmc_customer.CUSTOMER_NAME as location, count(dmsdatabase.danplas.`location_id`) as total FROM dmsdatabase.`danplas` INNER JOIN masterdatabase.dmc_customer ON dmsdatabase.danplas.`location_id`= masterdatabase.dmc_customer.CUSTOMER_ID WHERE dmsdatabase.danplas.`location_id` IS NOT null  AND dmsdatabase.danplas.`type_id` = 3 GROUP BY dmsdatabase.danplas.`location_id` ORDER BY location');
+        $type3_total = count(Danpla::where('type_id',3)->where('location_id','!=',null)->get());
+
         $d_type4 = DB::select('SELECT masterdatabase.dmc_customer.CUSTOMER_NAME as location, count(dmsdatabase.danplas.`location_id`) as total FROM dmsdatabase.`danplas` INNER JOIN masterdatabase.dmc_customer ON dmsdatabase.danplas.`location_id`= masterdatabase.dmc_customer.CUSTOMER_ID WHERE dmsdatabase.danplas.`location_id` IS NOT null  AND dmsdatabase.danplas.`type_id` = 4 GROUP BY dmsdatabase.danplas.`location_id` ORDER BY location');
-        
-        return view('pages.dashboard',compact('data5','d_type','d_type1','d_type2','d_type3','d_type4'));
+        $type4_total = count(Danpla::where('type_id',4)->where('location_id','!=',null)->get());
+
+        return view('pages.dashboard',compact(
+            'data5',
+            'd_type',
+            'd_type1',
+            'd_type2',
+            'd_type3',
+            'd_type4',
+            'summary_total',
+            'type1_total',
+            'type2_total',
+            'type3_total',
+            'type4_total',
+            'd_status1',
+            'd_status1_total',
+            'd_status2',
+            'd_status2_total'
+        ));
     }
 }

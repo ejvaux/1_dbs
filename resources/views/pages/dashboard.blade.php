@@ -4,26 +4,48 @@
 @section('content')
 @include('inc.messages')
 <div class="container dashb">
-    <div class="row justify-content-center mx-1 mb-2">
-        <div class="col-md-6 pr-1">
-            <div class="card">
-                {{-- <div class="card-header">Dashboard</div> --}}
+    {{-- <div class="row justify-content-center mx-1 mb-2">
+        <div class="col-md-6">
+            <div class="card">                
                 <div class="card-body">
                     <div id="danplalocationdiv2"></div>                  
                 </div>
             </div>
         </div>
-        <div class="col-md-6 pl-1">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
                     <div id="danplalocationdiv"></div>                      
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="row justify-content-center mx-1 mb-2">
+        <div class="col-md">
+            <div class="card">                
+                <div class="card-body">
+                    <div id="danplalocationdiv2"></div>                  
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row justify-content-center mx-1 mb-2">
+        <div class="col-md">
+            <div class="card">
+                <div class="card-body">
+                    <div id="danplalocationdiv"></div>                      
+                </div>
+            </div>
+        </div>        
     </div>
     <div class="row justify-content-center mx-1 mb-2">
         <div class="col-md">
             @include('pages.dashboard.summarytable')
+        </div>        
+    </div>
+    <div class="row justify-content-center mx-1 mb-2">
+        <div class="col-md">
+            @include('pages.dashboard.danplastatus')
         </div>        
     </div>
     <div class="row justify-content-center mx-1 mb-2">

@@ -3,7 +3,7 @@
 @section('tabTitle','SCAN DANPLA')
 @section('content')
 @include('inc.messages')
-<div class="container">
+<div class="container dashb">
     <div class='row mb-2'>
         <div class='col-md'>
             <a href='{{url('/scan')}}' class='btn btn-primary'><i class="fas fa-arrow-left"></i> BACK</a>

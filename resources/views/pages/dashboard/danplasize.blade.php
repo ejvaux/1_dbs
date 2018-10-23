@@ -9,7 +9,7 @@
                         <table class="table table-bordered table-sm m-0" id="myTable">
                             <thead class="thead-light">
                                 <tr>
-                                    <th>COMPANY NAME</th>
+                                    <th>LOCATION</th>
                                     <th>DANPLA QTY</th>
                                     {{-- <th>CURRENT LOCATION</th> --}}
                                 </tr>
@@ -21,7 +21,13 @@
                                             <td>{{ $d_type1a->location}}</td>
                                             <td>{{ $d_type1a->total }}</td>                                                                                
                                         </tr>           
-                                    @endforeach                
+                                    @endforeach
+                                    <tr>
+                                        <td><span class="font-weight-bold">TOTAL:</span></td>
+                                        <td>
+                                            {{$type1_total}}
+                                        </td>                                                                                
+                                    </tr>
                                 @else
                                     <p>No Data Found.</p>
                                 @endif
@@ -39,7 +45,7 @@
                         <table class="table table-bordered table-sm m-0" id="myTable">
                             <thead class="thead-light">
                                 <tr>
-                                    <th>COMPANY NAME</th>
+                                    <th>LOCATION</th>
                                     <th>DANPLA QTY</th>
                                     {{-- <th>CURRENT LOCATION</th> --}}
                                 </tr>
@@ -51,7 +57,13 @@
                                             <td>{{ $d_type1a->location}}</td>
                                             <td>{{ $d_type1a->total }}</td>                                                                                
                                         </tr>           
-                                    @endforeach                
+                                    @endforeach
+                                    <tr>
+                                        <td><span class="font-weight-bold">TOTAL:</span></td>
+                                        <td>
+                                            {{$type2_total}}
+                                        </td>                                                                                
+                                    </tr>               
                                 @else
                                     <p>No Data Found.</p>
                                 @endif
@@ -69,7 +81,7 @@
                         <table class="table table-bordered table-sm m-0" id="myTable">
                             <thead class="thead-light">
                                 <tr>
-                                    <th>COMPANY NAME</th>
+                                    <th>LOCATION</th>
                                     <th>DANPLA QTY</th>
                                     {{-- <th>CURRENT LOCATION</th> --}}
                                 </tr>
@@ -81,7 +93,13 @@
                                             <td>{{ $d_type1a->location}}</td>
                                             <td>{{ $d_type1a->total }}</td>                                                                                
                                         </tr>           
-                                    @endforeach                
+                                    @endforeach
+                                    <tr>
+                                        <td><span class="font-weight-bold">TOTAL:</span></td>
+                                        <td>
+                                            {{$type3_total}}
+                                        </td>                                                                                
+                                    </tr>                
                                 @else
                                     <p>No Data Found.</p>
                                 @endif
@@ -99,7 +117,7 @@
                         <table class="table table-bordered table-sm m-0" id="myTable">
                             <thead class="thead-light">
                                 <tr>
-                                    <th>COMPANY NAME</th>
+                                    <th>LOCATION</th>
                                     <th>DANPLA QTY</th>
                                     {{-- <th>CURRENT LOCATION</th> --}}
                                 </tr>
@@ -111,7 +129,13 @@
                                             <td>{{ $d_type1a->location}}</td>
                                             <td>{{ $d_type1a->total }}</td>                                                                                
                                         </tr>           
-                                    @endforeach                
+                                    @endforeach
+                                    <tr>
+                                        <td><span class="font-weight-bold">TOTAL:</span></td>
+                                        <td>
+                                            {{$type4_total}}
+                                        </td>                                                                                
+                                    </tr>               
                                 @else
                                     <p>No Data Found.</p>
                                 @endif

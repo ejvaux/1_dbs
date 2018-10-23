@@ -3,7 +3,7 @@
 @section('tabTitle','SCAN DANPLA')
 @section('content')
 @include('inc.messages')
-<div class="container">
+<div class="container dashb">
     <div class='row mb-1'>
         <div class='col-md'>
             <div class='form-group'>
