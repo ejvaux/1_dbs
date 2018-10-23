@@ -81,9 +81,18 @@
                 <li class="nav-item my-2">
                     <a class="nav-link sblink" href="{{ route('scan') }}"><i class="fas fa-barcode mr-3 sbicon"></i>SCAN</a>
                 </li>
-                {{-- <li class="nav-item my-2">
-                    <a class="nav-link sblink" href="{{ route('outgoing') }}"><i class="fas fa-sign-out-alt mr-3 sbicon"></i>OUTGOING</a>
-                </li> --}}
+                <li class='mt-auto'>
+                    <!-- Footer -->
+                    <footer class="page-footer font-small blue">
+                        <!-- Copyright -->
+                        <div class="footer-copyright text-center py-3">© 2018 Prima Tech Phils., Inc.
+                            <br>Designed and built by
+                            <br>Edmund O. Mati Jr.
+                        </div>
+                        <!-- Copyright -->
+                    </footer>
+                    <!-- Footer --> 
+                </li>
             </ul>
     </div>
 </div>

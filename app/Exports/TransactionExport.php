@@ -15,10 +15,10 @@ class TransactionExport implements FromQuery, WithHeadings
     public function headings(): array
     {
         return [
-            'Transaction #',
-            'Type',
-            'Location',
-            'Quantity',
+            'TRANSACTION #',
+            'TYPE',
+            'LOCATION',
+            'QUANTITY',
             'PIC',
         ];
     }

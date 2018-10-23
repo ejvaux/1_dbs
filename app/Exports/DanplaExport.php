@@ -15,11 +15,11 @@ class DanplaExport implements FromQuery, WithHeadings
     public function headings(): array
     {
         return [
-            'Barcode',
-            'Code',
-            'Type',
-            'Location',
-            'Status'
+            'BARCODE',
+            'CODE',
+            'TYPE',
+            'LOCATION',
+            'STATUS'
         ];
     }
 

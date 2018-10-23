@@ -27,7 +27,7 @@
                                 <th>{{ $loop->iteration }}</th>
                                 <th>{{ $danpla->danpla->barcode }}</th>
                                 <th>{{ $danpla->danpla->type->name }}</th>
-                                <th><button data-id='{{$danpla->id}}' class='btn btn-danger p-1 py-0 del_temp_list'><i class="fas fa-trash"></i></button></th>                                                                                       
+                                <th><button data-id='{{$danpla->id}}' class='btn btn-danger p-1 py-0 del_temp_list'><i class="far fa-trash-alt"></i></button></th>                                                                                       
                             </tr>
                         @endforeach 
                     @else

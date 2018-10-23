@@ -36,7 +36,7 @@
                                     <th><a class='userinfo_name' href='#' data-id='{{ $user->id }}'>{{ $user->name }}</a></th>                                                                           
                                     <th>
                                         @if (Auth::user()->id != $user->id)
-                                            <button type='button' class='btn btn-danger p-1 py-0 users_delete_btn' data-id='{{ $user->id }}'><i class="fas fa-trash"></i></button>
+                                            <button type='button' class='btn btn-danger p-1 py-0 users_delete_btn' data-id='{{ $user->id }}'><i class="far fa-trash-alt"></i></button>
                                         @endif                                        
                                         <form method="POST" id='users_delete_form{{$user->id}}' action='{{ url('/users/'.$user->id) }}'>
                                             @method('DELETE')
