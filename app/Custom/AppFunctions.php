@@ -15,7 +15,7 @@ class AppFunctions
         $year = date('Y');
         $day = date('d');
         $type = TransactionType::where('id',$typ)->first();
-        $series = Transaction::orderBy('number','DESC')->first();
+        $series = Transaction::orderBy('id','DESC')->first();
         if(empty($series)){
             return $type->initial.$year.$month.$day . "01";
         }

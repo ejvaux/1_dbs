@@ -3,7 +3,7 @@
 @section('tabTitle','ADMIN')
 @section('content')
 @include('inc.messages')
-<div class="container">
+<div class="container dashb">
     <div class="row mb-3">
         <div class='col-md-3'>
             <a href='{{ url('/admin') }}' class='btn btn-primary '><i class="fas fa-arrow-left"></i> Go Back</a>
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class='row'>
+    <div class='row '>
         <div class='col-md-5'>
             <div class='col-lg tble'>
                 <table class="table table-bordered" id="myTable">

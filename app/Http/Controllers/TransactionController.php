@@ -84,6 +84,17 @@ class TransactionController extends Controller
         $t->type_id =  $request->input('type_id');
         $t->location_id = $request->input('location_id');
         $t->save();
+
+        // Change location of Danpla
+        $dp = Danpla::where('transaction_id',$id)->get();
+        foreach($dp as $d)
+        {
+            $editd = Danpla::where('id',$d->id)->first();
+            $editd->status_id = $request->input('type_id');
+            $editd->location_id = $request->input('location_id');
+            $editd->save();
+        }
+
         return redirect()->back()->with('success','Transaction successfully updated.');
     }
 

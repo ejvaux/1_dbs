@@ -31,8 +31,7 @@ class MasterlistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        
+    {        
         return view('pages.masterlist',compact('danplas'));
     }
     public function danpla()
@@ -45,7 +44,7 @@ class MasterlistController extends Controller
     }
     public function transaction()
     {
-        $transactions = Transaction::sortable()->orderBy('id')->paginate('500');
+        $transactions = Transaction::sortable()->orderBy('id','DESC')->paginate('500');
         $t_types = TransactionType::get();
         $locations = Location::orderBy('CUSTOMER_NAME')->get();
         $pics = User::get();
