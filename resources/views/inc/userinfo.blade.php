@@ -25,14 +25,14 @@
                 </div>
             </div>
 
-            <div class="form-group row">
+            {{-- <div class="form-group row">
                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                 <div class="col-md-6">
                     <input id="emailview" type="text" class="form-control userinfo_label" value="{{ (!isset($user1->email) ? '' : $user1->email) }}" readonly>
                     <input id="email" type="email" class="form-control userinfo_disabled" name="email" value="{{ (!isset($user1->email) ? '' : $user1->email) }}" style='display:none'>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="form-group row">                 
                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
