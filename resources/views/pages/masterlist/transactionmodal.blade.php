@@ -21,7 +21,7 @@
                       </div>
                       <div class="col-7">
                         {{-- <input id="type_id" type="text" class="form-control form-control-sm" name="type_id" placeholder="" required> --}}
-                          <select id="type_id" name='type_id' class='form-control' required>
+                          <select id="trans_type_id" name='type_id' class='form-control' required>
                               <option value=''>- SELECT TYPE -</option>
                               @foreach ($t_types as $t_type)
                                   <option value='{{$t_type->id}}'>{{$t_type->name}}</option>
@@ -37,7 +37,7 @@
                   </div>
                   <div class="col-7">
                     {{-- <input id="location_id" type="text" class="form-control form-control-sm" name="location_id" placeholder="" required> --}}                  
-                      <select id="location_id" name='location_id' class='form-control'>
+                      <select id="trans_location_id" name='location_id' class='form-control' required>
                           <option value=''>- SELECT LOCATION -</option>
                           @foreach ($locations as $location)
                               <option value='{{$location->CUSTOMER_ID}}'>{{$location->CUSTOMER_NAME}}</option>

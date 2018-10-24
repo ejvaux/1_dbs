@@ -73,8 +73,8 @@ $(document).on('click', '#transactEditBtn', function(e) {
                         if(data){
                             /* alert('ok'); */
                             $('#transactionEditform').attr('action', '/1_dms/public/transaction/'+clickeddanplarow);                            
-                            $('#type_id').val(data.type_id);
-                            $('#location_id').val(data.location_id);
+                            $('#trans_type_id').val(data.type_id);
+                            $('#trans_location_id').val(data.location_id);
                         }                                                                   
                     },
                     /* error : function (jqXHR, textStatus, errorThrown) {							
@@ -147,4 +147,16 @@ $('#app').on("click",'#sdexport_btn',function(e) {
 $('#app').on("submit",'#scrapdanplaexportform',function(e) {
     $('#scrapdanplaexportmod').modal('hide');
     /* $(this).trigger("reset"); */
-})
+});
+
+$(document).on('change', '#trans_type_id', function(e) {
+    /* alert('test'); */
+    if($(this).val() == 1)
+    {
+        $('#trans_location_id').val(31);
+    }
+    else
+    {
+        $('#trans_location_id').val('');
+    }    
+});
