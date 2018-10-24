@@ -11,7 +11,8 @@
                 <button id='transactEditBtn' class='btn btn-primary danplalist_btn' disabled><i class="fas fa-edit"></i> EDIT</button>
                 <button id='transactViewBtn' class='btn btn-primary danplalist_btn' disabled><i class="far fa-eye"></i> VIEW DANPLA</button>
             @endif
-            <button id='texport_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>           
+            <button id='texport_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>
+            <button id='tsearch_btn' class='btn btn-primary'><i class="fas fa-search"></i> Advanced Search</button>           
         </div>
         <div class='col-md-4 ml-auto'>
             <div class="input-group">                    
@@ -31,4 +32,5 @@
     @include('pages.masterlist.transactionmodal')
 </div>
 @include('pages.masterlist.transactionexportmodal')
+@include('pages.masterlist.transactionsearchmodal')
 @endsection

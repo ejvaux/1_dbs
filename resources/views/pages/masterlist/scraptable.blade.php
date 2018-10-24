@@ -8,6 +8,7 @@
         <div class="col-md">
             <a href='{{url('/master')}}' class='btn btn-primary'><i class="fas fa-arrow-left"></i> BACK</a>
             <button id='sdexport_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>
+            <button id='sdsearch_btn' class='btn btn-primary'><i class="fas fa-search"></i> Advanced Search</button>
         </div>
         <div class='col-md-4 ml-auto'>
             <div class="input-group">                    
@@ -23,4 +24,5 @@
     </div>
 </div>
 @include('pages.masterlist.scrapexportmodal')
+@include('pages.masterlist.scrapsearchmodal')
 @endsection

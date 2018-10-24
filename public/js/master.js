@@ -149,6 +149,40 @@ $('#app').on("submit",'#scrapdanplaexportform',function(e) {
     /* $(this).trigger("reset"); */
 });
 
+/* ------------------- Show Search Modal Danpla ------------------- */
+$('#app').on("click",'#search_btn',function(e) {
+    $('#danplasearchmod').modal('show');
+});
+
+/* ------------------- Close Search Modal Danpla ------------------- */
+$('#app').on("submit",'#danplasearchform',function(e) {
+    $('#danplasearchmod').modal('hide');
+    /* $(this).trigger("reset"); */
+});
+
+/* ------------------- Show Export Modal Transactions------------------- */
+$('#app').on("click",'#tsearch_btn',function(e) {
+    $('#transactionsearchmod').modal('show');
+});
+
+/* ------------------- Close Export Modal Transactions ------------------- */
+$('#app').on("submit",'#transactionsearchform',function(e) {
+    $('#transactionsearchmod').modal('hide');
+    /* $(this).trigger("reset"); */
+});
+
+/* ------------------- Show Export Modal Scrap Danpla ------------------- */
+$('#app').on("click",'#sdsearch_btn',function(e) {
+    $('#scrapdanplasearchmod').modal('show');
+});
+
+/* ------------------- Close Export Modal Scrap Danpla ------------------- */
+$('#app').on("submit",'#scrapdanplasearchform',function(e) {
+    $('#scrapdanplasearchmod').modal('hide');
+    /* $(this).trigger("reset"); */
+});
+
+/* ------------------- Auto Location on Edit Modal ------------------- */
 $(document).on('change', '#trans_type_id', function(e) {
     /* alert('test'); */
     if($(this).val() == 1)

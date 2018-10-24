@@ -11,8 +11,6 @@
 |
 */
 
-use App\Transaction;
-
 /* Route::get('/', function () {
     return view('welcome');
 }); */
@@ -76,6 +74,11 @@ Route::get('/master/transaction/{txt}', 'SearchController@searchtransaction')->n
 Route::get('/master/scrap/{txt}', 'SearchController@searchscrap')->name('searchscrap');
 Route::get('/userslist/{txt}', 'SearchController@searchuser')->name('searchuser')->middleware('auth','admin');
 
+// Advanced Search
+Route::get('/master/advance/danpla', 'SearchController@advancesearchdanpla')->name('advancesearchdanpla');
+Route::get('/master/advance/transaction', 'SearchController@advancesearchtransaction')->name('advancesearchtransaction');
+Route::get('/master/advance/scrap', 'SearchController@advancesearchscrap')->name('advancesearchscrap');
+
 // Exporting
 Route::get('/master/danpla/export/all', 'DanplaController@exportall')->name('exportall');
 Route::get('/master/transaction/export/all', 'TransactionController@export')->name('transact_export');
@@ -83,27 +86,5 @@ Route::get('/master/scrapdanpla/export/all', 'ScrapDanplaController@export')->na
 
 // Test
 Route::get('/test', function(){
-    $tnum = '';
-    $pic = '';
-    $type = 2;
-    $location = '';
-
-    $query = Transaction::join('dmsdatabase.transaction_types', 'dmsdatabase.transaction_types.id', '=', 'dmsdatabase.transactions.type_id')
-                    ->join('masterdatabase.dmc_customer', 'masterdatabase.dmc_customer.CUSTOMER_ID', '=', 'dmsdatabase.transactions.location_id')
-                    ->join('dmsdatabase.users', 'dmsdatabase.users.id', '=', 'dmsdatabase.transactions.pic_id')
-                    ->select('dmsdatabase.transactions.number','dmsdatabase.transaction_types.name as type','masterdatabase.dmc_customer.CUSTOMER_NAME as location','dmsdatabase.users.name as pic');
-        
-        if($tnum != ''){
-            $query = $query->where('number','like','%'.$tnum.'%');
-        }
-        if($pic != ''){
-            $query = $query->where('pic_id',$pic);
-        }
-        if($type != ''){
-            $query = $query->where('type_id',$type);
-        }
-        if($location != ''){
-            $query = $query->where('location_id',$location);
-        }
-        return $query->get();
+    return count(App\Danpla::where('type_id',2)->get());
 });

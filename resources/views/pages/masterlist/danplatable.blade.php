@@ -12,7 +12,8 @@
                 <button id='danplaEditButton' class='btn btn-primary danplalist_btn' disabled><i class="fas fa-edit"></i> EDIT</button>
                 <button id='danplaDelButton' class='btn btn-primary danplalist_btn' disabled><i class="fas fa-minus-circle"></i> DELETE</button>
             @endif
-            <button id='export_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>           
+            <button id='export_btn' class='btn btn-primary'><i class="far fa-file-excel"></i> Export</button>
+            <button id='search_btn' class='btn btn-primary'><i class="fas fa-search"></i> Advanced Search</button>        
         </div>
         <div class='col-md-4 ml-auto'>
             <div class="input-group">                    
@@ -31,4 +32,5 @@
     @include('pages.masterlist.danplamodal')
 </div>
 @include('pages.masterlist.danplaexportmodal')
+@include('pages.masterlist.danplasearchmodal')
 @endsection
