@@ -3,7 +3,7 @@
 @section('tabTitle','ADMIN')
 @section('content')
 @include('inc.messages')
-<div class="container">
+<div class="container dashb">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <a href='{{url('/userslist')}}'><button class='flatb_admin'><span class='flatb_admin_label'>Users List</span><br><i class="fas fa-users flatb_admin_icon"></i></button></a>

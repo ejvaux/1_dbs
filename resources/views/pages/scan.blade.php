@@ -3,7 +3,7 @@
 @section('tabTitle','SCAN BARCODE')
 @section('content')
 @include('inc.messages')
-<div class="container">
+<div class="container dashb">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <a href='{{url('/scan/inout')}}'><button class='flatb_admin'><span class='flatb_admin_label'>In/Out Transactions</span><br><i class="fas fa-exchange-alt flatb_admin_icon"></i></button></a>
