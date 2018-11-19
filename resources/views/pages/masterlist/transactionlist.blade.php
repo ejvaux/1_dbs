@@ -9,6 +9,7 @@
                     <th>@sortablelink('location_id','LOCATION')</th>
                     <th>@sortablelink('quantity','TOTAL')</th>
                     <th>@sortablelink('pic_id','PIC')</th>
+                    <th>@sortablelink('created_at','CREATED AT')</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,7 +25,8 @@
                                 @endif
                             </td>
                             <td>{{ $transaction->quantity }}</td>
-                            <td>{{ $transaction->user->name }}</td>                                                                                        
+                            <td>{{ $transaction->user->name }}</td>
+                            <td>{{ $transaction->created_at }}</td>                                                                                    
                         </tr>
                     @endforeach                
                 @else
