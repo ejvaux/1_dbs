@@ -10,8 +10,8 @@
                     <th>@sortablelink('location_id','LOCATION')</th>
                     {{-- <th>@sortablelink('condition_id','CONDITION')</th> --}}
                     <th>@sortablelink('status_id','STATUS')</th>
-                    {{-- <th>@sortablelink('created_at','CREATED_AT')</th>
-                    <th>@sortablelink('updated_at','UPDATED_AT')</th> --}}
+                    {{-- <th>@sortablelink('created_at','CREATED_AT')</th> --}}
+                    <th>@sortablelink('updated_at','UPDATED_AT')</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,8 +29,8 @@
                             </td>
                             {{-- <td>{{ $danpla->condition->name }}</td> --}}
                             <td>{{ $danpla->status->name }}</td>
-                            {{-- <th>{{ $danpla->created_at }}</th>
-                            <th>{{ $danpla->updated_at }}</th> --}}                                                           
+                            {{-- <th>{{ $danpla->created_at }}</th> --}}
+                            <th>{{ $danpla->updated_at }}</th>                                                           
                         </tr>
                     @endforeach                
                 @else
