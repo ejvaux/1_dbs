@@ -62,7 +62,7 @@
         <ul class="nav flex-column sidebar-wrapper pt-2 px-3">
                 <li class="nav-item p-1 logo-img text-center mb-2">
                     <span class="badge badge-pill badge-light mb-3 p-0">
-                        <a class="nav-link text-center" href="/1_mes/" >
+                        <a class="nav-link text-center" href="http://172.16.1.13:8000" >
                             <img src="{{ asset('images/primatech-logo.png') }}" style="width: 146px; height: 28px">
                         </a>
                     </span>
